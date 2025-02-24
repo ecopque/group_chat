@@ -29,4 +29,4 @@ while True:
         rooms_dict[room] = []
 
     rooms_dict[room].append(client)
-    print(f'rooms_dict::: {room}.')
+    print(f'rooms_dict::: {rooms_dict}.')
