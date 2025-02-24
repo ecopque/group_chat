@@ -30,3 +30,5 @@ while True:
 
     rooms_dict[room].append(client)
     print(f'rooms_dict::: {rooms_dict}.')
+
+    print(f'Status: {name} connected to room {room}.')
