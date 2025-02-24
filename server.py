@@ -10,6 +10,8 @@ server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind((HOST, PORT))
 server.listen()
 
+rooms_dict = {}
+
 while True:
     client, addr = server.accept()
     print(f'client.server.accept()::: {client}')
@@ -18,5 +20,11 @@ while True:
     client.send(b'ROOM')
     room = client.recv(1024).decode()
     name = client.recv(1024).decode()
-    print(room)
-    print(name)
+    print(f'room: {room}.')
+    print(f'name: {name}.')
+
+    if room not in rooms_dict.keys():
+        rooms_dict[room] = []
+
+    rooms_dict[room].append(client)
+    print(f'rooms_dict: {room}.')
