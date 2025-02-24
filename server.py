@@ -18,13 +18,15 @@ while True:
     print(f'addr.server.accept()::: {addr}')
     print()
     client.send(b'ROOM')
+
     room = client.recv(1024).decode()
     name = client.recv(1024).decode()
-    print(f'room: {room}.')
-    print(f'name: {name}.')
+    print(f'room::: {room}.')
+    print(f'name::: {name}.')
 
+    print()
     if room not in rooms_dict.keys():
         rooms_dict[room] = []
 
     rooms_dict[room].append(client)
-    print(f'rooms_dict: {room}.')
+    print(f'rooms_dict::: {room}.')
