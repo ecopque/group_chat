@@ -19,3 +19,4 @@ while True:
     room = client.recv(1024).decode()
     name = client.recv(1024).decode()
     print(room)
+    print(name)
