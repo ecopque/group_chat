@@ -8,7 +8,7 @@ PORT = 55556
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect((HOST, PORT))
 
-message = client.recv(1024)
+message = client.recv(1024).decode()
 print(f'message.client.recv::: {message}')
 
 if message == 'ROOM':
