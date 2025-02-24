@@ -12,8 +12,10 @@ server.listen()
 
 while True:
     client, addr = server.accept()
-    print(client)
+    print(f'client.server.accept()::: {client}')
+    print(f'addr.server.accept()::: {addr}')
     print()
     client.send(b'ROOM')
     room = client.recv(1024).decode()
     name = client.recv(1024).decode()
+    print(room)
