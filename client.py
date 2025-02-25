@@ -12,7 +12,7 @@ class Chat:
         PORT = 55556
 
         self.client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.client.connect(HOST, PORT)
+        self.client.connect((HOST, PORT))
 
         login = Tk() # tkinter *
         login.withdraw() # tkinter *
@@ -22,3 +22,5 @@ class Chat:
 
         self.name = simpledialog.askstring('Name', 'Enter your name: ', parent=login)
         self.room = simpledialog.askstring('Room', 'Enter the room: ', parent=login)
+
+chat = Chat()
