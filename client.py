@@ -14,13 +14,17 @@ class Chat:
         self.client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.client.connect((HOST, PORT))
 
-        login = Tk() # tkinter *
-        login.withdraw() # tkinter *
+        login = Tk() # tkinter * # Instance/GUI graphical interface.
+        login.withdraw() # tkinter * # Hide the main window.
 
-        self.loaded_window = False
-        self.active = True
+        self.loaded_window = False # Has not yet been loaded or initialized.
+        self.active = True # Ready to send and receive messages.
 
-        self.name = simpledialog.askstring('Name', 'Enter your name: ', parent=login)
-        self.room = simpledialog.askstring('Room', 'Enter the room: ', parent=login)
+        self.name = simpledialog.askstring('Name', 
+                                           'Enter your name: ', 
+                                           parent=login) # dialog box will appear over the login window.
+        self.room = simpledialog.askstring('Room', 
+                                           'Enter the room: ', 
+                                           parent=login)
 
 chat = Chat()
