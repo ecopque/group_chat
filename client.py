@@ -23,4 +23,9 @@ class Chat:
         self.name = simpledialog.askstring('Name', 'Enter your name: ', parent=login) # dialog box will appear over the login window.
         self.room = simpledialog.askstring('Room', 'Enter the room: ', parent=login)
 
+    def window(self):
+        self.root = Tk()
+        self.root.geometry('800x800')
+        self.root.title('Group Chat')
+
 chat = Chat()
