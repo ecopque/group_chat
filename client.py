@@ -13,3 +13,11 @@ class Chat:
 
         self.client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.client.connect(HOST, PORT)
+
+        login = Tk() # tkinter *
+        login.withdraw() # tkinter *
+
+        self.loaded_window = False
+        self.active = True
+
+        self.name = simpledialog.askstring('Name', 'Enter your name: ', parent=login)
