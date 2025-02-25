@@ -20,11 +20,7 @@ class Chat:
         self.loaded_window = False # Has not yet been loaded or initialized.
         self.active = True # Ready to send and receive messages.
 
-        self.name = simpledialog.askstring('Name', 
-                                           'Enter your name: ', 
-                                           parent=login) # dialog box will appear over the login window.
-        self.room = simpledialog.askstring('Room', 
-                                           'Enter the room: ', 
-                                           parent=login)
+        self.name = simpledialog.askstring('Name', 'Enter your name: ', parent=login) # dialog box will appear over the login window.
+        self.room = simpledialog.askstring('Room', 'Enter the room: ', parent=login)
 
 chat = Chat()
