@@ -11,8 +11,8 @@ class Chat:
         HOST = 'localhost'
         PORT = 55556
 
-        self.client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.client.connect((HOST, PORT))
+        # self.client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        # self.client.connect((HOST, PORT))
 
         login = Tk() # tkinter * # Instance/GUI graphical interface.
         login.withdraw() # tkinter * # Hide the main window.
@@ -22,6 +22,7 @@ class Chat:
 
         self.name = simpledialog.askstring('Name', 'Enter your name: ', parent=login) # dialog box will appear over the login window.
         self.room = simpledialog.askstring('Room', 'Enter the room: ', parent=login)
+        self.window()
 
     def window(self):
         self.root = Tk()
@@ -29,6 +30,7 @@ class Chat:
         self.root.title('Group Chat')
 
         self.text_box = Text(self.root)
-        self.text_box.place(relx=0.05)
+        self.text_box.place(relx=0.05, rely=0.01, width=700, height=600)
+        self.root.mainloop() # Make window say open.
 
 chat = Chat()
