@@ -28,4 +28,7 @@ class Chat:
         self.root.geometry('800x800')
         self.root.title('Group Chat')
 
+        self.text_box = Text(self.root)
+        self.text_box.place(relx=0.05)
+
 chat = Chat()
