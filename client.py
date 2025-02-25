@@ -22,6 +22,10 @@ class Chat: #2:
 
         self.name = simpledialog.askstring('Name', 'Enter your name: ', parent=login) #3: # dialog box will appear over the login window.
         self.room = simpledialog.askstring('Room', 'Enter the room: ', parent=login) #3:
+        
+        thread = threading.Thread(target=self.connect) #7:
+        thread.start() #7:
+
         self.window() #4:
 
     def window(self): #4:
@@ -54,7 +58,8 @@ class Chat: #2:
             else:
                 self.text_box.insert('end', received.decode()) #7:
 
-    def Send_Message(self):
-        ...
+    def Send_Message(self): #8:
+        message = self.send_message.get()
+        self.client.send(message.encode())
 
 chat = Chat()
