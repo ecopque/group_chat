@@ -1,0 +1,3 @@
+# Group Chat Application - Real-time Chat System
+
+A real-time group chat application built using Python, socket programming, and threading. The project allows users to connect to a specific chat room, send and receive messages, and see real-time updates when other users join the room. The server handles multiple rooms and clients, while the client-side interface is powered by Tkinter for a simple, interactive user experience. This project demonstrates real-time communication, multithreading, and networking principles in Python.
