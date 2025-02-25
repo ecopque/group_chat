@@ -44,6 +44,6 @@ while True: #4:
     print(f'rooms_dict::: {rooms_dict}.') #6:
     print(f'Status: {name} connected to room {room}.') #6:
 
-    # broadcast(room, f'{name} entered the room.\n')
+    broadcast(room, f'{name} entered the room.\n')
     thread = threading.Thread(target=send_message, args=(name, room, client)) #8:
     thread.start() #8:

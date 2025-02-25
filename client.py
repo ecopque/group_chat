@@ -56,7 +56,10 @@ class Chat: #2:
                 self.client.send(self.room.encode()) #7:
                 self.client.send(self.name.encode()) #7:
             else:
-                self.text_box.insert('end', received.decode()) #7:
+                try: #8:
+                    self.text_box.insert('end', received.decode()) #7: #8:
+                except: #8:
+                    ...
 
     def Send_Message(self): #8:
         message = self.send_message.get()
