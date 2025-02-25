@@ -31,6 +31,11 @@ class Chat:
 
         self.text_box = Text(self.root)
         self.text_box.place(relx=0.05, rely=0.01, width=700, height=600)
+
+        self.send_message = Entry(self.root)
+        self.send_message.place(relx=0.05, rely=0.8, width=500, height=20)
+
         self.root.mainloop() # Make window say open.
+
 
 chat = Chat()
