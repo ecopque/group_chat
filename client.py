@@ -35,6 +35,8 @@ class Chat:
         self.send_message = Entry(self.root)
         self.send_message.place(relx=0.05, rely=0.8, width=500, height=20)
 
+        self.button_send = Button(self.root, text='Send', command=send_message)
+
         self.root.mainloop() # Make window say open.
 
 
