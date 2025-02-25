@@ -21,3 +21,4 @@ class Chat:
         self.active = True
 
         self.name = simpledialog.askstring('Name', 'Enter your name: ', parent=login)
+        self.room = simpledialog.askstring('Room', 'Enter the room: ', parent=login)
